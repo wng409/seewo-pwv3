@@ -1,13 +1,18 @@
 🔓 Seewo密码恢复工具 (EXE便携版)
 
-项目出处: 基于 CatMe0w/bruteforce_passwordv3 进行打包优化
+项目出处: 基于https://github.com/CatMe0w/bruteforce_passwordv3 进行打包优化
 
+https://img.shields.io/badge/Python-3.6%2B-blue
+https://img.shields.io/badge/Platform-Windows-lightgrey
+https://img.shields.io/badge/License-MIT-green
+https://img.shields.io/badge/Based%20On-bruteforce__passwordv3-orange
+https://img.shields.io/badge/Packaging-py2exe%20Online-brightgreen
 
 📋 目录
 
 · 项目简介
-· 打包方式
 · 文件结构
+· 打包方式
 · 功能特性
 · 系统要求
 · 安装使用
@@ -18,29 +23,55 @@
 
 🎯 项目简介
 
-这个工具专门用于从希沃设备的配置文件中恢复锁屏密码和管理员密码。基于 CatMe0w/bruteforce_passwordv3 项目，使用在线py2exe工具打包成可执行文件，无需Python环境即可运行。
+这个工具专门用于从希沃设备的配置文件中恢复锁屏密码和管理员密码。基于https://github.com/CatMe0w/bruteforce_passwordv3 项目，使用 https://py2exe.com 在线打包工具打包成可执行文件，无需Python环境即可运行。
 
 通过分析系统配置文件和注册表信息，使用多进程暴力破解技术找回6位数字密码。
+
+📁 文件结构
+
+项目完整文件结构
+
+```
+SeewoPasswordRecovery/
+├── 📁 _internal/                 # 运行时依赖目录（必需）- 24分钟前
+│   ├── python311.dll            # Python 3.11解释器核心
+│   ├── VCRUNTIME140.dll         # Visual C++ 运行时
+│   ├── base_library.zip         # Python标准库压缩包
+│   ├── *.pyd                    # Python扩展模块
+│   └── *.dll                    # 系统依赖库
+├── 📄 Pasward_V_Passwardv3.exe  # 主程序可执行文件 - 24分钟前
+├── 📄 Pasward_V_Passwardv3.py   # Python源代码文件 - 21分钟前
+├── 📄 README.md                 # 项目说明文档 - 39分钟前
+├── 📄 requirements.txt          # Python依赖说明 - 刚刚
+└── 📄 LICENSE                   # MIT许可证文件 - 11分钟前
+```
+
+文件说明
+
+文件/文件夹 类型 说明 更新时间
+_internal/ 目录 必需依赖 - Python运行时和系统库 24分钟前
+Pasward_V_Passwardv3.exe 可执行文件 主程序 - 打包后的可执行文件 24分钟前
+Pasward_V_Passwardv3.py 源代码 Python源代码文件 21分钟前
+README.md 文档 项目说明和使用指南 39分钟前
+requirements.txt 配置 Python依赖说明文件 刚刚
+LICENSE 许可证 MIT许可证文件 11分钟前
+
+重要说明
+
+· 必需依赖: _internal 文件夹必须与主程序在同一目录下
+· 不可删除: 删除 _internal 文件夹将导致程序无法运行
+· 完整分发: 分发时需要包含所有文件，保持完整结构
+· 多种使用方式: 可直接运行EXE，也可使用Python源代码
 
 📦 打包方式
 
 打包工具和方法
 
-· 打包工具: py2exe.com 在线打包服务
+· 打包工具: https://py2exe.com 在线打包服务
+· 转换工具: https://py2exe.com
 · 打包方式: 直接上传Python脚本，自动生成EXE文件和依赖
 · 修改情况: 除打包外，未对原始代码进行任何修改
 · 完整性: 保持原始项目的所有功能和算法逻辑
-
-打包输出结构
-
-```
-项目目录/
-├── Pasward_V_Passwardv3.exe     # 主程序可执行文件
-└── _internal/                   # 必要的依赖文件目录
-    ├── python3x.dll             # Python运行时库
-    ├── 其他依赖DLL文件...        # 其他必要的动态链接库
-    └── ...                     # 其他运行时文件
-```
 
 在线打包优势
 
@@ -48,27 +79,6 @@
 · ⚡ 快速便捷 - 上传即打包，简化流程
 · 🔒 代码保持 - 确保与原始项目完全一致
 · 📁 完整依赖 - 包含所有必要的运行时文件
-
-📁 文件结构
-
-打包后完整文件结构
-
-```
-SeewoPasswordRecovery/
-├── Pasward_V_Passwardv3.exe      # 主程序可执行文件
-├── _internal/                    # 运行时依赖目录（必需）
-│   ├── python3x.dll             # Python解释器核心
-│   ├── *.pyd                    # Python扩展模块
-│   ├── *.zip                    # Python标准库压缩包
-│   └── 其他必要的DLL和资源文件   # 确保程序正常运行
-└── README.md                    # 项目说明文档
-```
-
-重要说明
-
-· 必需依赖: _internal 文件夹必须与主程序在同一目录下
-· 不可删除: 删除 _internal 文件夹将导致程序无法运行
-· 完整分发: 分发时需要同时包含EXE文件和_internal文件夹
 
 ✨ 功能特性
 
@@ -105,8 +115,8 @@ SeewoPasswordRecovery/
 
 完整安装步骤
 
-1. 下载完整包 - 获取包含EXE和_internal文件夹的完整程序包
-2. 保持文件结构 - 确保_internal文件夹与EXE文件在同一目录
+1. 下载完整包 - 获取包含所有文件的完整程序包
+2. 保持文件结构 - 确保所有文件保持原有目录结构
 3. 直接运行 - 双击Pasward_V_Passwardv3.exe启动程序
 4. 自动检测 - 程序自动检查系统环境和配置文件
 5. 密码恢复 - 等待程序完成密码破解过程
@@ -121,7 +131,7 @@ SeewoPasswordRecovery/
 
 重要提醒
 
-· ✅ 保持完整: EXE文件和_internal文件夹必须在一起
+· ✅ 保持完整: 所有文件必须保持原有结构
 · ✅ 不要移动: 不要单独移动EXE文件到其他位置
 · ✅ 完整分发: 分发时包含整个程序目录
 
@@ -169,7 +179,7 @@ graph TD
 
 文件依赖要求
 
-· ✅ 完整文件结构 - 必须保持EXE和_internal文件夹的完整结构
+· ✅ 完整文件结构 - 必须保持所有文件的完整结构
 · ✅ 不可分离 - 不能单独运行EXE文件
 · ✅ 路径正确 - 确保程序从正确的位置启动
 · ✅ 权限足够 - 需要读取系统文件和注册表的权限
@@ -190,14 +200,14 @@ graph TD
 
 如果遇到文件缺失错误：
 
-1. 确认_internal文件夹存在且完整
-2. 检查EXE文件和_internal文件夹的相对路径
-3. 不要重命名或移动_internal文件夹
-4. 从原始打包位置重新获取完整文件
+1. 确认所有文件完整且位置正确
+2. 检查文件相对路径
+3. 不要重命名或移动文件
+4. 从原始位置重新获取完整文件包
 
 打包相关问题
 
-由于使用在线py2exe打包，如遇运行问题：
+由于使用在线https://py2exe打包，如遇运行问题：
 
 1. 确认Windows版本兼容性
 2. 检查系统架构(32/64位)
@@ -231,27 +241,28 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-本项目基于 CatMe0w/bruteforce_passwordv3 项目，遵循相同的MIT许可证。
+本项目基于 https://github.com/CatMe0w/bruteforce_passwordv3 项目，遵循相同的MIT许可证。
 
 🙏 致谢
 
-· 感谢 CatMe0w 的原始项目
-· 感谢 py2exe.com 提供的在线打包服务
+· 感谢 CatMe0w 的原始项目https://github.com/CatMe0w/bruteforce_passwordv3
+· 感谢 https://py2exe.com 提供的在线打包服务
 · 感谢所有贡献者和测试者
 
 🔄 更新记录
 
-· 2025-11-22 - 使用py2exe.com在线打包，创建EXE版本
+· 2025-11-22 - 使用https://py2exe.com在线打包，创建EXE版本
 · 保持同步 - 功能与原始项目完全一致，仅作打包处理
 
 ---
 
 版本: v3.0 (EXE便携版)
 打包日期: 2025年11月22日
-打包工具: py2exe.com
-原项目: bruteforce_passwordv3
+打包工具: https://py2exe.com
+转换工具: https://py2exe.com
+原项目: https://github.com/CatMe0w/bruteforce_passwordv3
 修改说明: 仅作打包处理，功能代码零修改
-文件要求: 必须包含_internal依赖文件夹
+文件要求: 必须包含所有文件，保持完整结构
 
 ---
 
@@ -259,4 +270,5 @@ SOFTWARE.
 
 1. 请负责任地使用此工具，遵守相关法律法规和道德准则
 2. 本工具仅限用于授权的设备恢复和教育工作
-3. 必须保持EXE文件和_internal文件夹的完整结构
+3. 必须保持所有文件的完整结构
+4. _internal文件夹为必需依赖，不可删除
