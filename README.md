@@ -1,6 +1,6 @@
 🔓 Seewo密码恢复工具 (EXE便携版)
 
-项目出处: 基于 CatMe0w/bruteforce_passwordv3 进行打包优化
+项目出处: 基于 https://github.com/CatMe0w/bruteforce_passwordv3 进行打包优化
 
 
 📋 目录
@@ -18,7 +18,7 @@
 
 🎯 项目简介
 
-这个工具专门用于从希沃设备的配置文件中恢复锁屏密码和管理员密码。基于 CatMe0w/bruteforce_passwordv3 项目，使用在线py2exe工具打包成可执行文件，无需Python环境即可运行。
+这个工具专门用于从希沃设备的配置文件中恢复锁屏密码和管理员密码。基于 https://gitihub.com/CatMe0w/bruteforce_passwordv3 项目，使用在线py2exe工具打包成可执行文件，无需Python环境即可运行。
 
 通过分析系统配置文件和注册表信息，使用多进程暴力破解技术找回6位数字密码。
 
@@ -26,7 +26,7 @@
 
 打包工具和方法
 
-· 打包工具: py2exe.com 在线打包服务
+· 打包工具: https://www.py2exe.com 在线打包服务
 · 打包方式: 直接上传Python脚本，自动生成EXE文件和依赖
 · 修改情况: 除打包外，未对原始代码进行任何修改
 · 完整性: 保持原始项目的所有功能和算法逻辑
@@ -231,7 +231,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-本项目基于 CatMe0w/bruteforce_passwordv3 项目，遵循相同的MIT许可证。
+本项目基于 https://github.com/CatMe0w/bruteforce_passwordv3 项目，遵循相同的MIT许可证。
 
 🙏 致谢
 
