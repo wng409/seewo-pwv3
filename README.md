@@ -2,11 +2,11 @@
 
 项目出处: 基于https://github.com/CatMe0w/bruteforce_passwordv3 进行打包优化
 
-https://img.shields.io/badge/Python-3.6%2B-blue
-https://img.shields.io/badge/Platform-Windows-lightgrey
-https://img.shields.io/badge/License-MIT-green
-https://img.shields.io/badge/Based%20On-bruteforce__passwordv3-orange
-https://img.shields.io/badge/Packaging-py2exe%20Online-brightgreen
+![python](https://img.shields.io/badge/Python-3.6%2B-blue)
+![mit](https://img.shields.io/badge/Platform-Windows-lightgrey)
+![win](https://img.shields.io/badge/License-MIT-green)
+![from](https://img.shields.io/badge/Based%20On-bruteforce__passwordv3-orange)
+![py2exe](https://img.shields.io/badge/Packaging-py2exe%20Online-brightgreen)
 
 📋 目录
 
