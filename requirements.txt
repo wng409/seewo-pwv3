@@ -1,0 +1,11 @@
+# 无第三方依赖
+# 要求 Python 3.6+
+# 仅限 Windows 系统
+# multiprocessing
+#OS
+#sys
+#logging
+#configparser
+#winreg
+#hashlib
+#typing
